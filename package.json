@@ -8,9 +8,10 @@
     "clean": "mkdir -p dist && del-cli dist/*",
     "build-enable": "pushd dist && ../tools/appify.sh ../src/enable_synergy.sh 'Enable Synergy' && popd",
     "build-disable": "pushd dist && ../tools/appify.sh ../src/disable_synergy.sh 'Disable Synergy' && popd",
-    "build": "npm run clean && npm run build-enable && npm run build-disable && npm run add-icons && sudo npm run refresh-finder",
+    "build": "tools/build.sh",
     "add-icons": "node ./tools/add-icons.js",
-    "refresh-finder": "./tools/refresh-finder.sh"
+    "refresh-finder": "./tools/refresh-finder.sh", 
+    "create-dmg": "create-dmg './dist/Enable Synergy.app' && create-dmg './dist/Disable Synergy.app'"
   },
   "author": "bjesuiter@gmail.com",
   "license": "ISC",
