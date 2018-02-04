@@ -4,7 +4,11 @@
   "description": "This repo produces little macOS Apps to disable and reenable Symless Synergy 2.0.x in macOS. This will be obsolete after Synergy 2.1, which will likely come in Q3 2018.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "mkdir -p dist && del-cli dist/*", 
+    "build-enable": "pushd dist && ../tools/appify.sh ../src/enable_synergy.sh 'Enable Synergy' && popd",
+    "build-disable": "pushd dist && ../tools/appify.sh ../src/disable_synergy.sh 'Disable Synergy' && popd",
+    "build": "npm run clean && npm run build-enable && npm run build-disable"
   },
   "author": "bjesuiter@gmail.com",
   "license": "ISC",
