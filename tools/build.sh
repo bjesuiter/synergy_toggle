@@ -9,4 +9,5 @@ npm run add-icons
 
 # sudo npm run refresh-finder
 
-npm run create-dmg
+# not working currently because of 'undefined variable acces' error in create-dmg
+# npm run create-dmg
