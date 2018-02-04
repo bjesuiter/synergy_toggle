@@ -13,9 +13,10 @@ const enablePlist = [
         "CFBundleShortVersionString": version,
         "CFBundleName": "Enable Synergy",
         "CFBundleDisplayName": "Enable Synergy",
+        "CFBundleExecutable": "Enable Synergy",
         "CFBundlePackageType": "APPL",
         "CFBundleIconFile": "AppIcon",
-        "CFBundleIconName": "AppIcon"
+        "CFBundleIconName": "AppIcon", 
     }
 ]
 
@@ -26,6 +27,7 @@ const disablePlist = [
         "CFBundleShortVersionString": version,
         "CFBundleName": "Disable Synergy",
         "CFBundleDisplayName": "Disable Synergy",
+        "CFBundleExecutable": "Disable Synergy",
         "CFBundlePackageType": "APPL",
         "CFBundleIconFile": "AppIcon",
         "CFBundleIconName": "AppIcon"

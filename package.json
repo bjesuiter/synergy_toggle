@@ -9,7 +9,7 @@
     "build-enable": "pushd dist && ../tools/appify.sh ../src/enable_synergy.sh 'Enable Synergy' && popd",
     "build-disable": "pushd dist && ../tools/appify.sh ../src/disable_synergy.sh 'Disable Synergy' && popd",
     "build": "tools/build.sh",
-    "add-icons": "node ./tools/add-icons.js",
+    "add-meta-data": "node ./tools/add-meta-data.js",
     "refresh-finder": "./tools/refresh-finder.sh",
     "create-dmg": "pushd dist && create-dmg EnableSynergy.app && create-dmg DisableSynergy.app && popd"
   },
