@@ -8,7 +8,7 @@
     "clean": "mkdir -p dist && del-cli dist/*",
     "build-enable": "pushd dist && ../tools/appify.sh ../src/enable_synergy.sh 'Enable Synergy' && popd",
     "build-disable": "pushd dist && ../tools/appify.sh ../src/disable_synergy.sh 'Disable Synergy' && popd",
-    "build": "npm run clean && npm run build-enable && npm run build-disable && npm run add-icons && npm run refresh-icons",
+    "build": "npm run clean && npm run build-enable && npm run build-disable && npm run add-icons && sudo npm run refresh-finder",
     "add-icons": "node ./tools/add-icons.js",
     "refresh-finder": "./tools/refresh-finder.sh"
   },
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/bjesuiter/synergy_toggle#readme",
   "dependencies": {},
   "devDependencies": {
+    "create-dmg": "^2.0.0",
     "del-cli": "^1.1.0",
     "fs-extra": "^5.0.0",
     "plist": "^2.1.0",
