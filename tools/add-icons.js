@@ -12,8 +12,8 @@ const enablePlist = [
         "CFBundleVersion": version,
         "CFBundleDisplayName": "Enable Synergy",
         "CFBundlePackageType": "APPL",
-        "CFBundleIconFile": "enable",
-        "CFBundleIconName": "enable"
+        "CFBundleIconFile": "AppIcon",
+        "CFBundleIconName": "AppIcon"
     }
 ]
 
@@ -23,33 +23,35 @@ const disablePlist = [
         "CFBundleVersion": version,
         "CFBundleDisplayName": "Disable Synergy",
         "CFBundlePackageType": "APPL",
-        "CFBundleIconFile": "disable",
-        "CFBundleIconName": "disable"
+        "CFBundleIconFile": "AppIcon",
+        "CFBundleIconName": "AppIcon"
     }
 ]
 
 //write plist files
-fse.writeFile(path.join(enableAppPath, 'Info.plist'), plist.build(enablePlist))
+const enablePromise = fse.writeFile(path.join(enableAppPath, 'Info.plist'), plist.build(enablePlist))
     .then(() => console.log('PList File for "Enable Synergy" App written successfully'));
 
-fse.writeFile(path.join(disableAppPath, 'Info.plist'), plist.build(disablePlist))
+const disablePromise = fse.writeFile(path.join(disableAppPath, 'Info.plist'), plist.build(disablePlist))
     .then(() => console.log('PList File for "Disable Synergy" App written successfully'));
-
+    
 //create Ressource folders
 Promise
     .all([
-        fse.mkdirp(path.join(enableAppPath, 'Ressources')),
-        fse.mkdirp(path.join(disableAppPath, 'Ressources'))
+        enablePromise,
+        disablePromise,
+        fse.mkdirp(path.join(enableAppPath, 'Resources')),
+        fse.mkdirp(path.join(disableAppPath, 'Resources'))
     ])
     .then(() => {
         return Promise.all([
-            fse.copyFile('res/enable.icns', path.join(enableAppPath, 'Ressources')),
-            fse.copyFile('res/disable.icns', path.join(disablePlist, 'Ressources'))
+            fse.copyFile('res/enable.icns', path.join(enableAppPath, 'Resources', 'AppIcon.icns')),
+            fse.copyFile('res/disable.icns', path.join(disableAppPath, 'Resources', 'AppIcon.icns'))
         ])
     })
     .then(() => console.log('Icons & PList Files successfully created'))
     .catch((err) => {
-        console.error('Error while creating Icons and PList Files for Apps');
+        console.error('Error while creating Icons and PList Files for Apps:');
         console.error(err);
     });
 
