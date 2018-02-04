@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/bjesuiter/synergy_toggle/issues"
   },
-  "homepage": "https://github.com/bjesuiter/synergy_toggle#readme"
+  "homepage": "https://github.com/bjesuiter/synergy_toggle#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "del-cli": "^1.1.0"
+  }
 }
