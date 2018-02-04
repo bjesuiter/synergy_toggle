@@ -5,7 +5,7 @@ npm run clean
 npm run build-enable
 npm run build-disable 
 
-npm run add-icons 
+# npm run add-icons 
 
 # not working correctly for some unknown reason
 # sudo npm run refresh-finder
