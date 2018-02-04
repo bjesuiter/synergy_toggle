@@ -1,0 +1,19 @@
+{
+  "name": "synergy_toggle",
+  "version": "1.0.0",
+  "description": "This repo produces little macOS Apps to disable and reenable Symless Synergy 2.0.x in macOS. This will be obsolete after Synergy 2.1, which will likely come in Q3 2018.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bjesuiter@gmail.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bjesuiter/synergy_toggle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bjesuiter/synergy_toggle/issues"
+  },
+  "homepage": "https://github.com/bjesuiter/synergy_toggle#readme"
+}
