@@ -10,6 +10,7 @@ const enablePlist = [
     {
         "CFBundleIdentifier": "de.bjesuiter.enable-synergy",
         "CFBundleVersion": version,
+        "CFBundleShortVersionString": version,
         "CFBundleDisplayName": "Enable Synergy",
         "CFBundlePackageType": "APPL",
         "CFBundleIconFile": "AppIcon",
@@ -21,6 +22,7 @@ const disablePlist = [
     {
         "CFBundleIdentifier": "de.bjesuiter.disable-synergy",
         "CFBundleVersion": version,
+        "CFBundleShortVersionString": version,
         "CFBundleDisplayName": "Disable Synergy",
         "CFBundlePackageType": "APPL",
         "CFBundleIconFile": "AppIcon",
