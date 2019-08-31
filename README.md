@@ -1,4 +1,7 @@
 # synergy_toggle
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/bjesuiter/synergy_toggle.svg)](https://greenkeeper.io/)
+
 This repo produces little macOS Apps to disable and reenable Symless Synergy 2.0.x in macOS. This will be obsolete after Synergy 2.1, which will likely come in Q3 2018.
 
 
